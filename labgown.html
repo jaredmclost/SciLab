@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Gown</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('backimg.png') center/cover no-repeat;
+            filter: blur(3px);
+            z-index: -1;   
+        }
+
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px 30px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .header span:last-child {
+            cursor: pointer;
+            color: #888;
+            font-size: 1.5rem;
+        }
+
+        .form-group1 {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group1 input {
+            flex: 1;
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Increase placeholder text size */
+        .form-group1 input::placeholder {
+            font-size: 1.1rem;
+            color: #888;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .radio-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group input {
+            margin-right: 8px;
+        }
+
+        .approve-button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            background-color: #ff3399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .approve-button:hover {
+            background-color: #888
+        }
+        .back-button {
+            width: 10%;
+            padding: 10px;
+            font-size: 1.2rem;
+            background-color: #ff3399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+         }
+
+         .back-button:hover {
+            background-color: #888
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+    <form action="labgownapproved.html" method="POST">
+        <div class="container">
+            <div class="header">
+                <a href="scilab.html" class="back-button">Back</a>
+                <span>CONTROL NO: 00000</span>
+                <span>&times;</span>
+            </div>
+            
+            <div class="form-group1">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="ID No" required>
+            </div>
+            <div class="form-group1">
+                <input type="text" placeholder="Course & Year" required>
+                <input type="text" placeholder="Date Borrowed" required>
+            </div>
+            <div class="form-group1">
+                <input type="text" placeholder="Department" required>
+                <input type="text" placeholder="Time" required>
+            </div>
+            <div class="form-group1">
+                <input type="text" placeholder="Contact No." required>
+            </div>
+
+            <div class="radio-group">
+                <label><input type="radio" name="gown_type" required> Lab Gown</label>
+                <label><input type="radio" name="gown_type"> Lab Apron</label>
+            </div>
+            
+            <button class="approve-button">Approved</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submitted</title>
+  <link rel="stylesheet" href="fontawesome.min.css"> <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #faf5f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .acknowledgment-modal.show .container {
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 500px; /* Optional: Set a maximum width for responsiveness */
+    }
+
+    .message {
+      background-color: #ff69b4; /* Pink color */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .message i {
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .message h2 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .message p {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .buttons button {
+      background-color: #ff69b4;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    .buttons button:hover {
+      background-color: #ddd;
+    }
+
+    .buttons button.primary { /* New class for "Request Again" button */
+      background-color: #ff69b4;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    .buttons button:hover {
+      background-color: #ddd;
+    }
+
+    body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('backimg.png') center/cover no-repeat;
+            filter: blur(3px);
+            z-index: -1;   
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message">
+      <i class="fas fa-check"></i>  <h2>Successfully Requested!</h2>
+      <p>Your request has been submitted.</p> </div>
+    <div class="buttons">
+      <button class="primary" onclick="goToAnotherPage('materials.html')">REQUEST AGAIN</button>
+      <button onclick="goToAnotherPage('scilab.html')">EXIT</button>
+    </div>
+  </div>
+
+  <script src="fontawesome.js"></script> <script>
+    function goToAnotherPage(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Request</title>
+    <link rel="stylesheet" href="Matgown.css">
+</head>
+<body>
+    <style>
+         .back-button {
+            width: 10%;
+            padding: 10px;
+            font-size: 1.2rem;
+            background-color: #ff3399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+         }
+
+         .back-button:hover {
+            background-color: #888
+        }
+
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('backimg.png') center/cover no-repeat;
+            filter: blur(3px);
+            z-index: -1;   
+        }
+    </style>
+
+<div class="container2">
+    <div class="header2">
+        <a href="scilab.html" class="back-button">Back</a>
+        <div>CONTROL NO: 00013</div>
+        <div>MATERIAL REQUEST</div>
+    </div>
+
+    <div class="form-group2">
+        <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-field">
+            <label for="experiment-no">Experiment No.</label>
+            <input type="text" id="experiment-no" name="experiment-no">
+        </div>
+        <div class="form-field">
+            <label for="group-no">Group No.</label>
+            <input type="text" id="group-no" name="group-no">
+        </div>
+        <div class="form-field">
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department">
+        </div>
+        <div class="form-field">
+            <label for="title-experiment">Title Experiment</label>
+            <input type="text" id="title-experiment" name="title-experiment">
+        </div>
+        <div class="form-field">
+            <label for="date-experiment">Date of Experiment</label>
+            <input type="date" id="date-experiment" name="date-experiment">
+        </div>
+        <div class="form-field">
+            <label for="time-experiment">Time of Experiment</label>
+            <input type="time" id="time-experiment" name="time-experiment">
+        </div>
+    </div>
+
+    <div class="table-container2">
+        <table class="table2">
+            <tr>
+                <th>Members</th>
+                <th>Name</th>
+                <th>ID No.</th>
+            </tr>
+            <tr>
+                <td>Member 1 (Leader)</td>
+                <td><input type="text" name="member1-name" style="width: 90%;"></td>
+                <td><input type="text" name="member1-id" style="width: 90%;"></td>
+            </tr>
+            <tr>
+                <td>Member 2</td>
+                <td><input type="text" name="member2-name" style="width: 90%;"></td>
+                <td><input type="text" name="member2-id" style="width: 90%;"></td>
+            </tr>
+            <tr>
+                <td>Member 3</td>
+                <td><input type="text" name="member3-name" style="width: 90%;"></td>
+                <td><input type="text" name="member3-id" style="width: 90%;"></td>
+            </tr>
+            <tr>
+                <td>Member 4</td>
+                <td><input type="text" name="member4-name" style="width: 90%;"></td>
+                <td><input type="text" name="member4-id" style="width: 90%;"></td>
+            </tr>
+        </table>
+    </div>
+
+    <a href="proceedmaterial.html" class="proceed-button">Proceed</a>
+</div>
+
+</body>
+</html>
